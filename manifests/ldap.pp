@@ -10,6 +10,7 @@ class dovecot::ldap (
   $ldap_scope            = 'subtree',
   $ldap_debug_level      = '-1',
   $ldap_user_filter      = '(&(objectClass=user)(cn=%n))',
+  $ldap_user_attrs        = 'cn=user', #cn is ldap attribute name, user is dovecot field
   $ldap_pass_filter      = '(&(objectClass=user)(cn=%n))',
   $ldap_pass_attrs       = 'cn=user', #cn is ldap attribute name, user is dovecot field
   $ldap_iterate_attrs    = 'cn=user',

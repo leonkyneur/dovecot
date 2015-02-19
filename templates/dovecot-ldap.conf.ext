@@ -110,11 +110,7 @@ scope = <%= @ldap_scope %>
 #
 # There are also other special fields which can be returned, see
 # http://wiki2.dovecot.org/UserDatabase/ExtraFields
-user_attrs = \
-  =home=/srv/vmail/%d/%n,\
-  =uid=vmail,\
-  =gid=vmail,\
-  =mail=maildir:~/mail
+user_attrs = <%= @ldap_user_attrs %>
 
 # Filter for user lookup. Some variables can be used (see
 # http://wiki2.dovecot.org/Variables for full list):
